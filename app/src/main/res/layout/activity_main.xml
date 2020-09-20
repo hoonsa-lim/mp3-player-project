@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Main">
+
+    <androidx.fragment.app.FragmentTabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0A0B0D">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0A0B0D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0A0B0D"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="#0A0B0D" />
+
+                    <FrameLayout
+                        android:id="@+id/tabRealContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0A0B0D">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearBottomBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="end"
+                    android:background="#1D2326"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ibPicture_activity"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#00FFFFFF"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/disk" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_intent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+                            android:text="곡을 선택해주세요"
+                            android:textColor="#EBEFF2"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="-"
+                            android:textColor="#EBEFF2"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/linear_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvProgress_main"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:text="재생중"
+                                android:textColor="#EBEFF2" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar_main"
+                                style="@android:style/Widget.ProgressBar.Small.Inverse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/ibBack_main"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="#00FFFFFF"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/back" />
+
+                            <ImageButton
+                                android:id="@+id/ibPlay_main"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:background="#00FFFFFF"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/play" />
+
+                            <ImageButton
+                                android:id="@+id/ibNext_main"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="#00FFFFFF"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/next" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.fragment.app.FragmentTabHost>
+</LinearLayout>

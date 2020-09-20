@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Hoomp3_player_1'

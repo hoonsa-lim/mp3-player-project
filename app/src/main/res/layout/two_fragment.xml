@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0B0D"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ibAllList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_totallist"
+                android:text="전체 리스트"
+                android:textColor="#EBEFF2"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/ibSinger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_totallist"
+                android:text="가수별"
+                android:textColor="#EBEFF2"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/ibGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_totallist"
+                android:text="장르별"
+                android:textColor="#EBEFF2"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/frag2_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:longClickable="true" />
+
+</LinearLayout>
